@@ -24,8 +24,8 @@ WHERE id = 6
 -- Exo 2.1
 -- Insérez un tag :
 -- - nom : SASS
--- - description : aucune
-
+-- - description : aucun
+INSERT INTO tag(name, description) VALUES('SASS', NULL)
 -- Exo 2.2
 -- Insérez une school year :
 -- - nom: Promo 2023
