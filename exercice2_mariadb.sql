@@ -26,13 +26,14 @@ WHERE id = 6
 -- - nom : SASS
 -- - description : aucun
 INSERT INTO tag(name, description) VALUES('SASS', NULL)
+
 -- Exo 2.2
 -- Insérez une school year :
 -- - nom: Promo 2023
 -- - description : La promo de l'année 2023
 -- - date de début : 15 mars 2023
 -- - date de fin : aucune
-
+INSERT INTO `school_year` (`id`, `name`, `description`, `start_date`, `end_date`) VALUES (NULL, 'promo 2023', 'la promo de l année 2023', '2023-03-15', NULL); 
 -- Exo 2.3
 -- Créez une relation entre un student et un tag :
 -- - student : Toto (id 1)
@@ -42,12 +43,12 @@ INSERT INTO tag(name, description) VALUES('SASS', NULL)
 -- Exo 2.4
 -- Mettez à jour le tag `HTML` :
 -- description : Le HTML est un language de structuration de données.
-
+UPDATE `tag` SET `description` = 'le HTML est un langage de structuration de données\r\n' WHERE `tag`.`id` = 1; 
 -- Exo 2.5
 -- Mettez à jour le tag `Bash` :
 -- nom : Terminal Bash
 -- description : Le terminal Bash est l'interface en ligne de commande par défaut sous Linux.
-
+UPDATE `tag` SET `description` = 'le terminal Bash est l interface en ligne de commande par défaut' WHERE `tag`.`name` = 'Terminal Bash'; 
 -- Exo 2.6
 -- Supprimez la relation entre un student et un tag :
 -- - student : Zacharie Evrard
