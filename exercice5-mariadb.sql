@@ -14,3 +14,4 @@ SELECT * FROM `student_tag` INNER JOIN `student` ON student_tag.student_id = stu
 SELECT * FROM `student` INNER JOIN `student_tag` ON student_tag.student_id = student.id WHERE student.id = 2; 
 -- Exo 5.4
 -- Listez le tag dont l'id est `2` avec ses students
+SELECT * FROM `student_tag` INNER JOIN `student` ON student_tag.student_id = student.id WHERE student.id = 2; 
