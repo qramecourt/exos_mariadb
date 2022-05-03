@@ -31,7 +31,7 @@ SELECT * FROM `student` WHERE created_at <= "2021-01-01" AND updated_at >="2021-
 -- Listez les projects :
 -- - dont la description ne contient pas la chaîne de caractères `Dolores`
 -- - OU dont la date de début est postérieure au 1er juillet 2021 inclus
-
+SELECT * FROM `project` WHERE `description` NOT LIKE '%Dolores%' OR start_date > 2021-07-01; 
 -- Exo 3.5
 -- Listez les projects :
 -- - dont la description ne contient pas la chaîne de caractères `Dolores`
@@ -41,13 +41,14 @@ SELECT * FROM `student` WHERE created_at <= "2021-01-01" AND updated_at >="2021-
 -- Listez les projects :
 -- - dont la date de création est postérieure au 1er janvier 2021 inclus
 -- - ET dont la date de début est antérieure au 1er juillet 2021 inclus
-
+SELECT * FROM `project`WHERE client_name NOT LIKE '%Dolores%' AND start_date > 2021-07-01; 
 -- Exo 3.7
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr` ET la date de création est antérieure au 10 janvier 2021 inclus
 -- - OU ayant un project
-
+SELECT * FROM `student` WHERE email LIKE '%.fr%' AND created_at >= 2021-01-10 OR project_id IS NOT NULL; 
 -- Exo 3.8
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr` ET la date de création est antérieure au 10 janvier 2021 inclus
 -- - ET n'ayant pas de project
+SELECT * FROM `student` WHERE email LIKE '%.fr%' AND created_at >= 2021-01-10 AND project_id IS NOT NULL; 
