@@ -39,7 +39,7 @@ INSERT INTO `school_year` (`id`, `name`, `description`, `start_date`, `end_date`
 -- - student : Toto (id 1)
 -- - tag : SASS (id inconnu)
 -- Note : c'est à vous de retrouver l'id du tag mais vous pouvez l'inscrire en dur dans la requête.
-
+INSERT INTO `student_tag` VALUES(1, 11);
 -- Exo 2.4
 -- Mettez à jour le tag `HTML` :
 -- description : Le HTML est un language de structuration de données.
@@ -53,11 +53,12 @@ UPDATE `tag` SET `description` = 'le terminal Bash est l interface en ligne de c
 -- Supprimez la relation entre un student et un tag :
 -- - student : Zacharie Evrard
 -- - tag : Bash
-
+DELETE FROM student_tag WHERE student_id = 100 AND tag_id = 10; 
 -- Exo 2.7
 -- Supprimez la relation entre un student et un projet :
 -- - student : Arthur Lacombe
 -- - projet : Dicta quia at qui
+-- - student_id = 16
 
 -- Exo 2.8
 -- Supprimez toutes les relations entre un student et ses tags :
